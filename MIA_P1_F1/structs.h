@@ -1,42 +1,76 @@
+
 #ifndef STRUCTS_H
 #define STRUCTS_H
 
-struct struct_partition{
-    int status_part;
-    char type[5];
-    char fit[3];
-    int start_part;
-    int size_part;
-    char name[32];
-};
-struct struct_mbr{
-    int tamanio_mbr;
-    int restante_mbr;
-    char fecha[100];
-    int signature_mbr;
-    int cant_particion_p;
-    int cant_particion_e;
-    struct struct_partition partition[4];
-};
-struct struct_ebr{
-    char status_ebr;
-    char fit[3];
-    int start_ebr;
-    int size_ebr;
-    int next_ebr;
-    char name[16];
-};
-struct struct_mount_disco{
-    char path[100];
-    int estado_mount;
-    int letra_ascii;
-};
-struct struct_mount_particion{
-    char name[50];
-    int estado;
-    int letra_ascii;
-    int numero;
-    char id[5];
-};
+typedef struct S_Instruccion{
+    char comando[256];
+
+    bool tiene_path;
+    char path[256];
+
+    bool tiene_size;
+    unsigned int size;
+
+    bool tiene_unit;
+    char unit;
+
+    bool tiene_name;
+    char name[256];
+
+    bool tiene_type;
+    bool tiene_type_2;
+    char type;
+    char type_2[8];
+
+    bool tiene_fit;
+    char fit[4];
+
+    bool tiene_delete;
+    char delete[8];
+
+    bool tiene_add;
+    signed int add;
+
+    bool tiene_id;
+    char id[16];
+
+    bool tiene_ruta;
+    char ruta[256];
+
+}S_Instruccion;
+
+typedef struct Partition{
+    char part_status;
+    char part_type;
+    char part_fit;
+    unsigned int part_start;
+    unsigned int part_size;
+    char part_name[16];
+}Partition;
+
+typedef struct MBR{
+    unsigned int mbr_tamanio;
+    time_t mbr_fecha_creacion;
+    unsigned int mbr_disk_signature;
+    Partition mbr_partition_1;
+    Partition mbr_partition_2;
+    Partition mbr_partition_3;
+    Partition mbr_partition_4;
+}MBR;
+
+typedef struct EBR{
+    char part_status;
+    char part_fit;
+    unsigned int part_start;
+    unsigned int part_size;
+    unsigned int part_next;
+    char part_name[16];
+}EBR;
+
+typedef struct EncabezadoMontaje{
+    char path[256];
+    char nombre_particion[32][32];
+}EncabezadoMontaje;
+
 
 #endif // STRUCTS_H

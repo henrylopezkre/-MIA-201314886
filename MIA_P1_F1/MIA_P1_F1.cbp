@@ -31,9 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="analizador_comandos.h" />
+		<Unit filename="ejecutor.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="montajeMejorado.h" />
 		<Unit filename="structs.h" />
 		<Extensions>
 			<code_completion />

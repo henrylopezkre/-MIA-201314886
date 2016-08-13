@@ -1,5 +1,46 @@
 # depslib dependency file v1.0
-1469674041 source:/home/sorge/CodeBlocksProjects/MIA_P1_F1/main.c
-	<stdio.h>
+1471029234 source:/home/sorge/CodeBlocksProjects/MIA_P1_F1/main.c
 	<stdlib.h>
+	"execute.h"
+
+1470942184 /home/sorge/CodeBlocksProjects/MIA_P1_F1/analizador_comandos.h
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<ctype.h>
+	"ejecutor.h"
+
+1470941442 /home/sorge/CodeBlocksProjects/MIA_P1_F1/ejecutor.h
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<time.h>
+	"montajeMejorado.h"
+
+1466293446 /home/sorge/CodeBlocksProjects/MIA_P1_F1/montajeMejorado.h
+	<string.h>
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+
+1471053035 /home/sorge/CodeBlocksProjects/MIA_P1_F1/execute.h
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<time.h>
+	"structs.h"
+	"parts.h"
+
+1471041493 /home/sorge/CodeBlocksProjects/MIA_P1_F1/structs.h
+
+1471050174 /home/sorge/CodeBlocksProjects/MIA_P1_F1/parts.h
 
